@@ -6,7 +6,7 @@ import { ActivityDatasourceService } from './activity.datasource.service';
   templateUrl: './activity.component.html',
 })
 export class ActivityComponent implements OnInit {
-  public act: string = '';
+  public activity: string = '';
 
   constructor(private datasource: ActivityDatasourceService) {}
 
@@ -15,6 +15,6 @@ export class ActivityComponent implements OnInit {
   }
 
   public getAct(): void {
-    this.datasource.getAct().subscribe((act) => (this.act = act));
+    this.datasource.getAct().subscribe((activity) => (this.activity = activity));
   }
 }
