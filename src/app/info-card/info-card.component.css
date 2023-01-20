@@ -1,9 +1,11 @@
 .item-container {
-  padding: 4px 8px;
-  margin: 4px;
+  padding: 4px 28px;
+  margin: 12px;
 
-  border: 2px solid rgba(155, 155, 155, 0.425);
-  border-radius: 10px;
+  border: 2px solid rgba(160, 160, 155, 0.425);
+  border-radius: 30px;
+
+  background: rgb(250, 252, 228);
 }
 
 * {

@@ -1,5 +1,8 @@
-<button (click)="addActivity()">Add new activity</button>
-<button (click)="clear()">clear all</button>
+<div class = LeftMargin>
+  <button (click)="addActivity()">Add new activity</button>
+  <button (click)="clear()">clear all</button>
+</div>
+
 
 <div *ngFor="let item of items">
   <activity></activity>

@@ -1,5 +1,5 @@
 button {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 button {
@@ -51,4 +51,8 @@ button:disabled {
   cursor: not-allowed;
   background: rgba(0, 0, 0, 0.08);
   color: rgba(0, 0, 0, 0.3);
+}
+
+.LeftMargin {
+  margin: 0 0 0 50px;
 }

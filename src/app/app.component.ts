@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public items: number[] = [1, 2];
+  public items: number[] = [];
 
   addActivity(): void {
     this.items.push(Math.random()); //to update with id
