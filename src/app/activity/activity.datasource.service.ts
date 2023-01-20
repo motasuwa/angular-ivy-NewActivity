@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of } from 'rxjs';
 
-interface IActivityResponse {
+export interface IActivityResponse {
   activity: string;
   type: string;
   participants: number;
@@ -28,9 +28,7 @@ export class ActivityDatasourceService {
 
   constructor(private http: HttpClient) {}
 
-  getAct(): Observable<string> {
-    return this.http
-      .get<IActivityResponse>(this.apiEndpoint)
-      .pipe(map((response) => response.activity));
+  getAct(): Observable<IActivityResponse> {
+    return this.http.get<IActivityResponse>(this.apiEndpoint);
   }
 }

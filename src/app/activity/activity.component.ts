@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivityDatasourceService } from './activity.datasource.service';
+import { ActivityDatasourceService, IActivityResponse } from './activity.datasource.service';
 
 @Component({
   selector: 'activity',
   templateUrl: './activity.component.html',
 })
 export class ActivityComponent implements OnInit {
-  public activity: string = '';
+  public activity: IActivityResponse = null;
 
   constructor(private datasource: ActivityDatasourceService) {}
 
