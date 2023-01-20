@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InfoCardComponent {
   @Input() type: string = '';
-  @Input() participants: number = 0;
+  @Input() participants: string = '';
   @Input() activity: string = '';
-  @Input() cost: number = 0;
+  @Input() cost: string = '';
 }
