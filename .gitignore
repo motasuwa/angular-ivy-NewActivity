@@ -1,5 +1,5 @@
 .DS_STORE
-
+/.angular/**
 /node_modules/**
 /dist/
 /bazel-out

@@ -1,8 +1,8 @@
 {
-    "name": "purchaseapp",
+    "name": "stackblitz_activitylist",
     "version": "1.0.0",
-    "description": "First Angular 15 Project",
-    "author": "Eugene Popov metanit.com",
+    "description": "First Angular 15 Project from StackBlitz ivy template",
+    "author": "Oleg",
     "scripts": {
       "ng": "ng",
       "start": "ng serve",
