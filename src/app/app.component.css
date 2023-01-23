@@ -56,3 +56,12 @@ button:disabled {
 .LeftMargin {
   margin: 0 0 0 50px;
 }
+
+.div1{    
+  width: 50%;
+  float: left;
+}
+.div2{    
+  width: 50%;  
+  float: right;
+}

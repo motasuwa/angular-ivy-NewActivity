@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./info-card.component.css'],
 })
 export class InfoCardComponent {
-  @Input() type: string = '';
-  @Input() participants: string = '';
-  @Input() activity: string = '';
-  @Input() cost: string = '';
+  @Input() highestSmall: string = '';
+  @Input() mainTopic: string = '';
+  @Input() moreInfo: string = '';
+  @Input() bottom: string = '';
 }
