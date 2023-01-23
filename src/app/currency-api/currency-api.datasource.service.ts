@@ -19,7 +19,7 @@ export interface ICurrency {
  
 
 @Injectable()
-export class PublicApiDatasourceService {
+export class CurrencyApiDatasourceService {
   private apiEndpoint = 'https://api.wazirx.com/sapi/v1/tickers/24hr';
 
   constructor(private http: HttpClient) {}
