@@ -9,7 +9,11 @@ export class AppComponent {
   public items: number[] = [];
 
   addActivity(): void {
-    this.items.push(Math.random()); //to update with id
+    this.items.push(1); //to update with id
+  }
+
+  addCurrency(): void {
+    this.items.push(2); //to update with id
   }
 
   clear(): void {

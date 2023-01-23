@@ -3,7 +3,7 @@ import { PublicApiDatasourceService, ICurrency } from './public-api.datasource.s
 
 @Component({
   selector: 'currency',
-  templateUrl: './currency.component.html',
+  templateUrl: './public-api.component.html',
 })
 export class PublicApiComponent implements OnInit {
   public currency: ICurrency = null;
