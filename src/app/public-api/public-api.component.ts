@@ -15,6 +15,7 @@ export class PublicApiComponent implements OnInit {
   }
 
   public getInr(): void {
-    this.datasource.getInr().subscribe((currency) => (this.currency = currency));
+    this.datasource.getInr().subscribe({next: (data: any) => (this.currency = data[1])}); 
+    //console.log(this.currency)
   }
 }
