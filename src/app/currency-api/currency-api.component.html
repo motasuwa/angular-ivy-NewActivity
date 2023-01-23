@@ -1,6 +1,6 @@
 <app-info-card
-  [highestSmall]="currency.highPrice"
-  [mainTopic]="currency.symbol"
-  [moreInfo]="currency.baseAsset" 
-  [bottom]="currency.openPrice"
+  [highestSmall]="'Price for last 24 hours'"
+  [mainTopic]="'Currency name: ' + currency.baseAsset"
+  [moreInfo]="'openPrice: ' + currency.openPrice + ' | lowPrice: ' + currency.lowPrice + ' | highPrice: ' + currency.highPrice  " 
+  [bottom]="'Volume: ' + currency.volume"
 ></app-info-card>
