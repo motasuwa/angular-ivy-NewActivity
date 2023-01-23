@@ -1,18 +1,28 @@
 <div class=LeftMargin>
+  <button (click)="addRandom()">Add random record</button>
   <button (click)="addActivity()">Add new activity</button>
   <button (click)="addCurrency()">Add new currency</button>
   <button (click)="clear()">clear all</button>
+
 </div>
+
+<select>
+  <option></option>
+  <option  *ngFor="let item of possibleItems" [value]="item">
+    {{item}}
+</option>
+
+</select>
 
 <div  class="div1">
   <div *ngFor="let item of items">
-    <activity *ngIf="item==1"></activity>
+    <activity *ngIf="item=='activity'"></activity>
   </div>
 </div>
 
 <div class="div2">
   <div *ngFor="let item of items" >
-    <currency *ngIf="item==2"></currency>
+    <currency *ngIf="item=='currency-api'"></currency>
   </div>
 </div>
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -6,16 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public items: number[] = [];
+  public items: string[] = [];
+
+  ngOnInit(){
+
+  }
+
+  public possibleItems = ['currency-api', 'activity'];
+  addRandom() {
+
+    let index = this.getRandomInt(0, this.possibleItems.length);
+    this.items.push(this.possibleItems[index]);
+  }
 
   addActivity(): void {
-    this.items.push(1); //to update with id
+    this.items.push("activity"); //to update with id
   }
 
   addCurrency(): void {
-    this.items.push(2); //to update with id
+    this.items.push("currency-api"); //to update with id
   }
-
+  
+  private getRandomInt(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
   clear(): void {
     this.items = [];
   }
