@@ -15,7 +15,11 @@ export class PublicApiComponent implements OnInit {
   }
 
   public getInr(): void {
-    this.datasource.getInr().subscribe({next: (data: any) => (this.currency = data[1])}); 
+    this.datasource.getInr().subscribe({next: (data: any) => (this.currency = data[this.getRandomInt(1,150)])}); 
     //console.log(this.currency)
   }
+  private getRandomInt(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
 }
