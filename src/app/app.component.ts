@@ -1,5 +1,5 @@
-import { Component } from '@angular/core'; 
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -9,7 +9,10 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 export class AppComponent {
   public items: string[] = [];
 
-  ngOnInit(){
+  public CardForm: FormControl = new FormControl('');
+
+
+  ngOnInit() {
 
   }
 
@@ -21,13 +24,23 @@ export class AppComponent {
   }
 
   addActivity(): void {
-    this.items.push("activity"); //to update with id
+    this.items.push("activity");
+  }
+  addCurrency(): void {
+    this.items.push("currency-api");
+  }
+  addSelected(): void {
+    let value = this.CardForm.value;
+    this.items.push(value);
+  }
+  public ButtonEnabled: boolean = true
+
+  SelectChanged(e: any) {
+    if (e.target.value == 'None') this.ButtonEnabled = true;
+    else this.ButtonEnabled = false;
   }
 
-  addCurrency(): void {
-    this.items.push("currency-api"); //to update with id
-  }
-  
+
   private getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min) + min);
   }
