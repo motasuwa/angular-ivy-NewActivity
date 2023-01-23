@@ -4,12 +4,13 @@
   <button (click)="addCurrency()">Add new currency</button>
   <button (click)="clear()">clear all</button>
   
-  <select formControlName="SelectCard" (change)="SelectChanged($event)">
+  <select [formControl]="SelectCard" (change)="SelectChanged($event)">
     <option value="None">None</option>
     <option  *ngFor="let item of possibleItems" [value]="item">
       {{item}}
   </option>
   </select>
+
   <button (click)="addSelected()" [disabled]="ButtonEnabled">Add selected record</button>
 
 </div>

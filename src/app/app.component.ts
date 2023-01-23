@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AppComponent {
   public items: string[] = [];
 
-  public CardForm: FormControl = new FormControl('');
+  public SelectCard: FormControl = new FormControl('');
 
 
   ngOnInit() {
@@ -17,8 +17,7 @@ export class AppComponent {
   }
 
   public possibleItems = ['currency-api', 'activity'];
-  addRandom() {
-
+  addRandom(): void {
     let index = this.getRandomInt(0, this.possibleItems.length);
     this.items.push(this.possibleItems[index]);
   }
@@ -30,7 +29,7 @@ export class AppComponent {
     this.items.push("currency-api");
   }
   addSelected(): void {
-    let value = this.CardForm.value;
+    let value = this.SelectCard.value;
     this.items.push(value);
   }
   public ButtonEnabled: boolean = true
