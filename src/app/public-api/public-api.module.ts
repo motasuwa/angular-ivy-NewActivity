@@ -11,4 +11,4 @@ import { PublicApiComponent } from './public-api.component';
   declarations: [PublicApiComponent],
   exports: [PublicApiComponent],
 })
-export class ActivityModule {}
+export class CurrencyModule {}
