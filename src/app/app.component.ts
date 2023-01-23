@@ -11,11 +11,6 @@ export class AppComponent {
 
   public SelectCard: FormControl = new FormControl('');
 
-
-  ngOnInit() {
-
-  }
-
   public possibleItems = ['currency-api', 'activity'];
   addRandom(): void {
     let index = this.getRandomInt(0, this.possibleItems.length);

@@ -5,7 +5,15 @@
   border: 2px solid rgba(160, 160, 155, 0.425);
   border-radius: 30px;
 
+}
+
+.newContainerBackgroundCurrency {
+ 
   background: rgb(250, 252, 228);
+}
+.newContainerBackgroundActivity {
+
+  background: rgb(252, 238, 238);
 }
 
 * {
