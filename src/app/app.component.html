@@ -3,16 +3,18 @@
   <button (click)="addActivity()">Add new activity</button>
   <button (click)="addCurrency()">Add new currency</button>
   <button (click)="clear()">clear all</button>
+  <select>
+    <option>None</option>
+    <option  *ngFor="let item of possibleItems" [value]="item">
+      {{item}}
+  </option>
+  </select>
 
 </div>
 
-<select>
-  <option></option>
-  <option  *ngFor="let item of possibleItems" [value]="item">
-    {{item}}
-</option>
 
-</select>
+
+
 
 <div  class="div1">
   <div *ngFor="let item of items">
