@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AppComponent {
   public items: string[] = [];
 
-  public SelectCard: FormControl = new FormControl('');
+  public SelectCard: FormControl = new FormControl('None');
 
   public possibleItems = ['currency-api', 'activity'];
   addRandom(): void {
