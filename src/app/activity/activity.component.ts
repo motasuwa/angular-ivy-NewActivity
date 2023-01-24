@@ -7,7 +7,7 @@ import { ActivityDatasourceService, IActivityResponse } from './activity.datasou
 })
 export class ActivityComponent implements OnInit {
   public activity: IActivityResponse = null;
-
+  public errorMessage:any = null;
   constructor(private datasource: ActivityDatasourceService) {}
 
   ngOnInit() {

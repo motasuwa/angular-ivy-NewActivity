@@ -15,20 +15,24 @@ export class InfoCardComponent implements OnInit, OnChanges {
   @Input() errMessage: any = null;
 
   public messageItself: string = '';
-
+  //public condition: boolean = true; // лишнее действие, привязка автообновляется итак при любых изменениях
+  
   ngOnInit() {
     this.SetClasses(this.cardType)
     console.log('this is info-card (1 OnInit) and error message is: ' + this.errMessage) // это действие выполняется до того как получен ответ по subscribe
     //this.messageItself = this.errMessage.error.message
+    this.messageItself = this.errMessage?.error.message
   }
   ngOnChanges(changes: SimpleChanges) {
-    for (let propName in changes) {
+    /*for (let propName in changes) {
       let chng = changes[propName];
       let cur  = JSON.stringify(chng.currentValue);
       let prev = JSON.stringify(chng.previousValue);
       console.log(`we have changes in info-card: ${propName}: currentValue = ${cur}, previousValue = ${prev}`);
-    }
-    console.log('this is info-card (2 OnChanges) and error message is: ' + this.errMessage) // это действие выполняется до того как получен ответ по subscribe
+    }*/
+    //console.log('this is info-card (2 OnChanges) and error message is: ' + this.errMessage) // это действие выполняется до того как получен ответ по subscribe
+    //this.condition = !this.errMessage // лишнее действие, привязка автообновляется итак при любых изменениях
+    //console.log('this is info-card. Condition : ' + this.condition)
   }
 
   currentClasses: any = null;
