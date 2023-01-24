@@ -15,7 +15,9 @@ export class CurrencyApiComponent implements OnInit {
   }
 
   public getInr(): void {
+    console.log('before getInr: '+ "errorMessage")
     this.datasource.getInr().subscribe({next: (data: any) => (this.currency = data[this.getRandomInt(1,300)])}); 
+    console.log('after getInr: '+ "errorMessage")
   }
   private getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min) + min);
