@@ -1,9 +1,10 @@
 <div [ngClass]="currentClasses" class="item-container">
-  <div *ngIf="!(errMessage=='');else error">
+  <div *ngIf="errMessage!=='';else error">
     <small>{{ highestSmall }}</small>
     <h3>{{ mainTopic }}</h3>
     <div><p> {{ moreInfo }} </p></div>
     <div><p> {{ bottom }} </p></div>
+    <div><p> Error occured: {{ errMessage }} </p></div>
   </div>
   <ng-template #error>
     <div><p> Error occured: {{ errMessage }} </p></div>
