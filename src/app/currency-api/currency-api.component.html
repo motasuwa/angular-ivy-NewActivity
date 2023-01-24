@@ -1,8 +1,8 @@
 <app-info-card
   [highestSmall]="'Price for last 24 hours'"
-  [mainTopic]="'Currency name: ' + currency.baseAsset"
-  [moreInfo]="'openPrice: ' + currency.openPrice + ' | lowPrice: ' + currency.lowPrice + ' | highPrice: ' + currency.highPrice  " 
-  [bottom]="'Volume: ' + currency.volume"
+  [mainTopic]="'Currency name: ' + currency?.baseAsset"
+  [moreInfo]="'openPrice: ' + currency?.openPrice + ' | lowPrice: ' + currency?.lowPrice + ' | highPrice: ' + currency?.highPrice  " 
+  [bottom]="'Volume: ' + currency?.volume"
   [cardType]="'currency-api'" 
   [errMessage]="errorMessage"
 ></app-info-card>

@@ -1,7 +1,8 @@
 <app-info-card
-  [highestSmall]="'Type: ' + activity.type"
-  [mainTopic]="activity.activity"
-  [moreInfo]="'Participants involved: ' + activity.participants" 
-  [bottom]="'Cost: ' + activity.price"
+  [highestSmall]="'Type: ' + activity?.type"
+  [mainTopic]="activity?.activity"
+  [moreInfo]="'Participants involved: ' + activity?.participants" 
+  [bottom]="'Cost: ' + activity?.price"
   [cardType]="'activity'" 
+  [errMessage]="'coming soon/cap'"
 ></app-info-card>

@@ -11,19 +11,24 @@ export class InfoCardComponent implements OnInit {
   @Input() moreInfo: string = '';
   @Input() bottom: string = '';
   @Input() cardType: string = '';
-  @Input() errMessage: string = '';
+  //@Input() errMessage: string = '';
+  @Input() errMessage: any = null;
+
+  public messageItself: string = '';
 
   ngOnInit() {
     this.SetClasses(this.cardType)
+    console.log('this is info-card and error message is: ' + this.errMessage)
+    //this.messageItself = this.errMessage.error.message
   }
 
-  currentClasses:any = null;
+  currentClasses: any = null;
   SetClasses(cardType: string): void {
-    if(cardType=='currency-api') {
-      this.currentClasses = {newContainerBackgroundCurrency: true}
+    if (cardType == 'currency-api') {
+      this.currentClasses = { newContainerBackgroundCurrency: true }
     }
-    if(cardType=='activity') {
-      this.currentClasses = {newContainerBackgroundActivity: true}
+    if (cardType == 'activity') {
+      this.currentClasses = { newContainerBackgroundActivity: true }
     }
   }
 

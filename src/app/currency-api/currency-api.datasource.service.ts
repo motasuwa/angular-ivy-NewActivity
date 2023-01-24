@@ -21,14 +21,14 @@ export interface ICurrency {
 @Injectable()
 export class CurrencyApiDatasourceService {
   private apiEndpoint = 'https://api.wazirx.com/sapi/v1/tickers/24hr';
-
+  public errorMessage: string = '';
   constructor(private http: HttpClient) { }
 
-  /*getInr(): Observable<ICurrency> {
-    return this.http.get<ICurrency>(this.apiEndpoint);
-  }*/
-  public errorMessage: string = '';
   getInr(): Observable<ICurrency> {
+    return this.http.get<ICurrency>(this.apiEndpoint);
+  }
+
+  /*getInr(): Observable<ICurrency> {
     return this.http.get(this.apiEndpoint).pipe(map((data: any) => {
       return data;
     }),
@@ -37,7 +37,7 @@ export class CurrencyApiDatasourceService {
         this.errorMessage = err.message;
         return [];
       }));
-  } 
+  } */
 }
 
 
