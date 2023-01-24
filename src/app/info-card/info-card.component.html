@@ -1,14 +1,11 @@
 <div [ngClass]="currentClasses" class="item-container">
-  <small>{{ highestSmall }}</small>
-  <h3>{{ mainTopic }}</h3>
-  <div>
-    <p>
-      {{ moreInfo }}
-    </p>
+  <div *ngIf="errMessage=='';else error">
+    <small>{{ highestSmall }}</small>
+    <h3>{{ mainTopic }}</h3>
+    <div><p> {{ moreInfo }} </p></div>
+    <div><p> {{ bottom }} </p></div>
   </div>
-  <div>
-    <p>
-      {{ bottom }}
-    </p>
-  </div>
+  <ng-template #error>
+    <div><p> {{ errMessage }} </p></div>
+  </ng-template>
 </div>

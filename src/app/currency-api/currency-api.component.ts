@@ -9,7 +9,7 @@ export class CurrencyApiComponent implements OnInit {
   public currency: ICurrency = null;
 
   constructor(private datasource: CurrencyApiDatasourceService) {}
-
+  public errorMessage:any = this.datasource.errorMessage;
   ngOnInit() {
     this.getInr();
   }

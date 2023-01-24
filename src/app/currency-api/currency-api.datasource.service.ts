@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
+import { map, Observable, of, throwError, catchError } from 'rxjs';
 
 
 export interface ICurrency {
@@ -14,17 +14,30 @@ export interface ICurrency {
   volume: number;
   bidPrice: number;
   askPrice: number;
-  at: number; 
+  at: number;
 }
- 
+
 
 @Injectable()
 export class CurrencyApiDatasourceService {
   private apiEndpoint = 'https://api.wazirx.com/sapi/v1/tickers/24hr';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getInr(): Observable<ICurrency> {
+  /*getInr(): Observable<ICurrency> {
     return this.http.get<ICurrency>(this.apiEndpoint);
-  }
+  }*/
+  public errorMessage: string = '';
+  getInr(): Observable<ICurrency> {
+    return this.http.get(this.apiEndpoint).pipe(map((data: any) => {
+      return data;
+    }),
+      catchError(err => {
+        console.log(err);
+        this.errorMessage = err.message;
+        return [];
+      }));
+  } 
 }
+
+

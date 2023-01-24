@@ -11,6 +11,7 @@ export class InfoCardComponent implements OnInit {
   @Input() moreInfo: string = '';
   @Input() bottom: string = '';
   @Input() cardType: string = '';
+  @Input() errMessage: string = '';
 
   ngOnInit() {
     this.SetClasses(this.cardType)
